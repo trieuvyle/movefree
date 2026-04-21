@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Chronic Pain Consultation · Da Nang</title>
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a class="nav-logo" onclick="scrollTo('hero')"><span>●</span> <span data-en="Pain Consult" data-vi="Tư Vấn Đau">Pain Consult</span></a>
+  <div class="nav-links">
+    <a onclick="scrollTo('problem')" data-en="The Problem" data-vi="Vấn Đề">The Problem</a>
+    <a onclick="scrollTo('insight')" data-en="Why It Persists" data-vi="Tại Sao Kéo Dài">Why It Persists</a>
+    <a onclick="scrollTo('roadmap')" data-en="Program" data-vi="Chương Trình">Program</a>
+    <a onclick="scrollTo('about')" data-en="About" data-vi="Về Tôi">About</a>
+    <a onclick="scrollTo('pricing')" data-en="Pricing" data-vi="Chi Phí">Pricing</a>
+  </div>
+  <div class="nav-right">
+    <button class="lang-btn" id="langBtn" onclick="toggleLang()">VI</button>
+    <button class="nav-cta btn" onclick="scrollTo('cta')" data-en="Book Free Session" data-vi="Đặt Lịch Miễn Phí">Book Free Session</button>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a onclick="scrollTo('problem');toggleMenu()" data-en="The Problem" data-vi="Vấn Đề">The Problem</a>
+  <a onclick="scrollTo('insight');toggleMenu()" data-en="Why It Persists" data-vi="Tại Sao Kéo Dài">Why It Persists</a>
+  <a onclick="scrollTo('roadmap');toggleMenu()" data-en="Program" data-vi="Chương Trình">Program</a>
+  <a onclick="scrollTo('about');toggleMenu()" data-en="About" data-vi="Về Tôi">About</a>
+  <a onclick="scrollTo('pricing');toggleMenu()" data-en="Pricing" data-vi="Chi Phí">Pricing</a>
+  <button class="btn btn-primary" onclick="scrollTo('cta');toggleMenu()" data-en="Book Free Session" data-vi="Đặt Lịch Miễn Phí">Book Free Session</button>
+</div>
+
+<!-- ═══ HERO ═══ -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="badge" data-en="Chronic Pain Specialist · Da Nang" data-vi="Chuyên Gia Đau Mãn Tính · Đà Nẵng">Chronic Pain Specialist · Da Nang</span>
+        <h1>
+          <span data-en="You've tried everything." data-vi="Bạn đã thử đủ mọi cách.">You've tried everything.</span><br>
+          <span class="hero-h1-accent" data-en="Still in pain." data-vi="Vẫn còn đau.">Still in pain.</span>
+        </h1>
+        <p class="sub" style="margin-top:20px" data-en="You deserve a clear explanation and a real plan — not another short-term fix." data-vi="Bạn xứng đáng được giải thích rõ ràng và có kế hoạch thực sự — không chỉ giảm đau tạm thời.">
+          You deserve a clear explanation and a real plan — not another short-term fix.
+        </p>
+        <p style="margin-top:16px;font-size:15px" data-en="I'm a physiotherapist specialising in chronic musculoskeletal pain. I work 1-on-1 with Vietnamese and international clients who feel stuck and exhausted from treatments that don't last." data-vi="Tôi là chuyên viên vật lý trị liệu chuyên về đau cơ xương khớp mãn tính. Tôi làm việc 1-1 với khách hàng Việt Nam và quốc tế — những người cảm thấy bế tắc sau nhiều lần điều trị không hiệu quả lâu dài.">
+          I'm a physiotherapist specialising in chronic musculoskeletal pain. I work 1-on-1 with Vietnamese and international clients who feel stuck and exhausted from treatments that don't last.
+        </p>
+        <div class="btn-row">
+          <button class="btn btn-primary" onclick="scrollTo('cta')" data-en="Book Free Assessment" data-vi="Đặt Lịch Đánh Giá Miễn Phí">Book Free Assessment</button>
+          <button class="btn btn-outline" onclick="scrollTo('cta')" data-en="Send a Message" data-vi="Gửi Tin Nhắn">Send a Message</button>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <img class="hero-photo" src="https://images.unsplash.com/photo-1706353399656-210cca727a33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=900" alt="Physiotherapist in Da Nang"/>
+        <div class="hero-float">
+          <strong data-en="Free" data-vi="Miễn Phí">Free</strong>
+          <span data-en="Initial Assessment" data-vi="Buổi Đánh Giá Đầu Tiên">Initial Assessment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROBLEM ═══ -->
+<section id="problem" style="background:#fff">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="eyebrow" data-en="You Are Not Alone" data-vi="Bạn Không Đơn Độc">You Are Not Alone</span>
+      <h2 data-en="Does this sound familiar?" data-vi="Điều này có quen thuộc không?">Does this sound familiar?</h2>
+      <p style="margin-top:14px" data-en="Chronic pain isn't just physical. It takes over your work, sleep, movement — and your sense of self." data-vi="Đau mãn tính không chỉ là vấn đề thể chất. Nó ảnh hưởng đến công việc, giấc ngủ, vận động — và cả cách bạn nhìn nhận bản thân.">
+        Chronic pain isn't just physical. It takes over your work, sleep, movement — and your sense of self.
+      </p>
+    </div>
+    <div class="card-grid-4">
+      <div class="card">
+        <span class="card-icon">🔄</span>
+        <h3 data-en="Pain keeps coming back" data-vi="Đau cứ tái phát mãi">Pain keeps coming back</h3>
+        <p data-en="You've tried massage, physio, medication. It helps briefly — then you're back to square one." data-vi="Bạn đã thử massage, vật lý trị liệu, thuốc men. Đỡ một thời gian rồi đau lại. Cứ lặp đi lặp lại.">You've tried massage, physio, medication. It helps briefly — then you're back to square one.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">❓</span>
+        <h3 data-en="No one explains why" data-vi="Không ai giải thích được">No one explains why</h3>
+        <p data-en="Scans look normal but you still hurt. No clear reason given. You start doubting yourself." data-vi="Chụp chiếu bình thường nhưng vẫn đau. Không có lý do rõ ràng. Bạn bắt đầu tự nghi ngờ mình.">Scans look normal but you still hurt. No clear reason given. You start doubting yourself.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">⏸️</span>
+        <h3 data-en="Life is on hold" data-vi="Cuộc sống bị đình trệ">Life is on hold</h3>
+        <p data-en="You avoid activities you used to love. Sitting, sleeping, or simply moving feels impossible." data-vi="Bạn tránh những hoạt động từng yêu thích. Ngồi, ngủ hay chỉ di chuyển mà không sợ cũng trở nên khó.">You avoid activities you used to love. Sitting, sleeping, or simply moving feels impossible.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">😓</span>
+        <h3 data-en="Exhausted from trying" data-vi="Mệt mỏi vì cứ phải thử">Exhausted from trying</h3>
+        <p data-en="You've spent time, money and energy on things that didn't last. You don't know what's next." data-vi="Bạn đã tốn thời gian, tiền bạc và sức lực. Không biết còn gì để thử nữa.">You've spent time, money and energy on things that didn't last. You don't know what's next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSIGHT ═══ -->
+<section id="insight">
+  <div class="container">
+    <span class="eyebrow" data-en="Understanding Chronic Pain" data-vi="Khoa Học Về Đau">Understanding Chronic Pain</span>
+    <h2 data-en="Why treatment alone may not be enough" data-vi="Tại sao điều trị thông thường chưa đủ">Why treatment alone may not be enough</h2>
+    <div class="insight-grid">
+      <div class="insight-text">
+        <p data-en="Chronic pain is different from acute pain. After 3 months, it's no longer just a signal of tissue damage — it becomes a deeply embedded pattern in your nervous system." data-vi="Đau mãn tính khác với đau cấp tính. Sau 3 tháng, đau không còn là tín hiệu tổn thương mô đơn thuần — nó trở thành mẫu hình ăn sâu vào hệ thần kinh của bạn.">
+          Chronic pain is different from acute pain. After 3 months, it's no longer just a signal of tissue damage — it becomes a deeply embedded pattern in your nervous system.
+        </p>
+        <p style="margin-top:14px" data-en="Research shows it's influenced by stress, sleep, movement habits, beliefs about pain, and daily life — not just what's happening in your muscles or joints." data-vi="Nghiên cứu cho thấy đau chịu ảnh hưởng của stress, giấc ngủ, thói quen vận động, niềm tin về đau và bối cảnh cuộc sống hàng ngày — không chỉ là cơ hay khớp.">
+          Research shows it's influenced by stress, sleep, movement habits, beliefs about pain, and daily life — not just what's happening in your muscles or joints.
+        </p>
+        <p style="margin-top:14px" data-en="This is why treating only the physical symptom provides temporary relief but rarely solves the problem long-term." data-vi="Đó là lý do chỉ điều trị triệu chứng thể chất mang lại giảm đau tạm thời mà hiếm khi giải quyết vấn đề lâu dài.">
+          This is why treating only the physical symptom provides temporary relief but rarely solves the problem long-term.
+        </p>
+        <div class="insight-quote">
+          <p data-en="The goal isn't to force the pain away. It's to help your nervous system feel safe again — so pain loses its grip on your life." data-vi="Mục tiêu không phải là loại bỏ đau bằng sức mạnh. Mà là giúp hệ thần kinh cảm thấy an toàn trở lại — để đau không còn kiểm soát cuộc sống của bạn.">
+            "The goal isn't to force the pain away. It's to help your nervous system feel safe again — so pain loses its grip on your life."
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="stat-card">
+          <div class="stat-val">1 in 5</div>
+          <div class="stat-label" data-en="Adults live with chronic pain worldwide" data-vi="Người trưởng thành sống với đau mãn tính trên toàn cầu">Adults live with chronic pain worldwide</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">70%</div>
+          <div class="stat-label" data-en="Of cases involve psychological &amp; lifestyle factors" data-vi="Trường hợp có yếu tố tâm lý và lối sống liên quan">Of cases involve psychological &amp; lifestyle factors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">3–6 mo</div>
+          <div class="stat-label" data-en="When pain becomes a nervous system pattern" data-vi="Khi đau trở thành mẫu hình của hệ thần kinh">When pain becomes a nervous system pattern</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SOLUTION ═══ -->
+<section id="solution" style="background:#f8f5f0">
+  <div class="container">
+    <div style="text-align:center;max-width:640px;margin:0 auto">
+      <span class="eyebrow" data-en="The Program" data-vi="Chương Trình">The Program</span>
+      <h2 data-en="A clear path forward — not just another treatment" data-vi="Con đường rõ ràng — không chỉ là một liệu pháp khác">A clear path forward — not just another treatment</h2>
+      <p style="margin-top:14px" data-en="A structured 7-session 1-on-1 consultation designed to give you understanding, practical tools, and long-term independence." data-vi="Chương trình tư vấn 1-1 có cấu trúc 7 buổi, giúp bạn hiểu vấn đề, có công cụ thực tế và độc lập lâu dài.">
+        A structured 7-session 1-on-1 consultation designed to give you understanding, practical tools, and long-term independence.
+      </p>
+    </div>
+    <div class="card-grid-4" style="margin-top:40px">
+      <div class="card" style="text-align:center">
+        <span class="card-icon">🧠</span>
+        <h3 data-en="Understand your pain" data-vi="Hiểu về cơn đau">Understand your pain</h3>
+        <p data-en="Evidence-based explanations tailored to your situation" data-vi="Giải thích dựa trên bằng chứng, phù hợp với tình huống của bạn">Evidence-based explanations tailored to your situation</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <span class="card-icon">🎯</span>
+        <h3 data-en="Set meaningful goals" data-vi="Đặt mục tiêu có ý nghĩa">Set meaningful goals</h3>
+        <p data-en="Focus on function and life quality, not just pain scores" data-vi="Tập trung vào chức năng và chất lượng cuộc sống">Focus on function and life quality, not just pain scores</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <span class="card-icon">🛠️</span>
+        <h3 data-en="Build practical skills" data-vi="Xây dựng kỹ năng thực tế">Build practical skills</h3>
+        <p data-en="Daily self-management tools you can use independently" data-vi="Công cụ tự quản lý hàng ngày dùng được độc lập">Daily self-management tools you can use independently</p>
+      </div>
+      <div class="card" style="text-align:center">
+        <span class="card-icon">🗺️</span>
+        <h3 data-en="Create a long-term plan" data-vi="Tạo kế hoạch dài hạn">Create a long-term plan</h3>
+        <p data-en="A personalised strategy built around your real life" data-vi="Chiến lược cá nhân hóa xây dựng quanh cuộc sống thực của bạn">A personalised strategy built around your real life</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ROADMAP ═══ -->
+<section id="roadmap">
+  <div class="container-md">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="eyebrow" data-en="7-Session Program" data-vi="Lộ Trình 7 Buổi">7-Session Program</span>
+      <h2 data-en="Your roadmap to clarity and independence" data-vi="Lộ trình đến sự rõ ràng và độc lập">Your roadmap to clarity and independence</h2>
+      <p style="margin-top:14px" data-en="Sessions every 4–5 days. Daily message support — I reply at the end of each day." data-vi="Các buổi cách nhau 4–5 ngày. Hỗ trợ nhắn tin hàng ngày — tôi phản hồi vào cuối mỗi ngày.">
+        Sessions every 4–5 days. Daily message support — I reply at the end of each day.
+      </p>
+    </div>
+    <div class="roadmap-list">
+      <div class="roadmap-item">
+        <div class="roadmap-num free"><span>00</span><small data-en="FREE" data-vi="FREE">FREE</small></div>
+        <div class="roadmap-card free-card">
+          <span class="roadmap-tag free-tag" data-en="FREE SESSION" data-vi="MIỄN PHÍ">FREE SESSION</span>
+          <h3 data-en="Assessment &amp; Direction" data-vi="Đánh Giá &amp; Định Hướng">Assessment &amp; Direction</h3>
+          <p data-en="Review your full history and goals. Check if this approach is right for you — no commitment required." data-vi="Xem xét toàn bộ tiền sử và mục tiêu. Đánh giá phương pháp có phù hợp không — không cần cam kết.">Review your full history and goals. Check if this approach is right for you — no commitment required.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-num"><span>01</span></div>
+        <div class="roadmap-card">
+          <span class="roadmap-tag" data-en="Session 1" data-vi="Buổi 1">Session 1</span>
+          <h3 data-en="Understanding Your Pain" data-vi="Hiểu Về Cơn Đau">Understanding Your Pain</h3>
+          <p data-en="Explore the science of chronic pain in plain language. Understand why it persists — and why it's not permanent damage." data-vi="Khám phá khoa học đau mãn tính bằng ngôn ngữ đơn giản. Hiểu tại sao đau kéo dài và không phải tổn thương vĩnh viễn.">Explore the science of chronic pain in plain language. Understand why it persists — and why it's not permanent damage.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-num"><span>02</span></div>
+        <div class="roadmap-card">
+          <span class="roadmap-tag" data-en="Session 2" data-vi="Buổi 2">Session 2</span>
+          <h3 data-en="Goal Setting &amp; First Actions" data-vi="Đặt Mục Tiêu &amp; Hành Động">Goal Setting &amp; First Actions</h3>
+          <p data-en="Define what matters most beyond pain relief. Create your first practical steps and build momentum." data-vi="Xác định điều quan trọng nhất. Tạo bước thực tế đầu tiên và bắt đầu tạo đà tiến.">Define what matters most beyond pain relief. Create your first practical steps and build momentum.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-num"><span>03</span></div>
+        <div class="roadmap-card">
+          <span class="roadmap-tag" data-en="Session 3" data-vi="Buổi 3">Session 3</span>
+          <h3 data-en="Reduce Fear &amp; Improve Movement" data-vi="Giảm Nỗi Sợ &amp; Cải Thiện Vận Động">Reduce Fear &amp; Improve Movement</h3>
+          <p data-en="Learn to move more without triggering flare-ups. Build a safe, graduated plan that grows your confidence." data-vi="Học cách vận động nhiều hơn mà không gây bùng phát. Xây dựng kế hoạch từng bước tăng tự tin.">Learn to move more without triggering flare-ups. Build a safe, graduated plan that grows your confidence.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-num"><span>04</span></div>
+        <div class="roadmap-card">
+          <span class="roadmap-tag" data-en="Session 4" data-vi="Buổi 4">Session 4</span>
+          <h3 data-en="Self-Management Skills" data-vi="Kỹ Năng Tự Quản Lý">Self-Management Skills</h3>
+          <p data-en="Receive practical tools: relaxation techniques, activity scheduling, and problem-solving strategies." data-vi="Nhận công cụ thực tế: thư giãn, lên kế hoạch hoạt động và chiến lược giải quyết vấn đề hàng ngày.">Receive practical tools: relaxation techniques, activity scheduling, and problem-solving strategies.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-num"><span>05</span></div>
+        <div class="roadmap-card">
+          <span class="roadmap-tag" data-en="Session 5" data-vi="Buổi 5">Session 5</span>
+          <h3 data-en="Creating a Sustainable Plan" data-vi="Xây Dựng Kế Hoạch Bền Vững">Creating a Sustainable Plan</h3>
+          <p data-en="Build a flare-up plan so difficult days no longer feel catastrophic. Know exactly what to do." data-vi="Tạo kế hoạch flare-up để ngày khó không còn thảm khốc. Biết chính xác phải làm gì.">Build a flare-up plan so difficult days no longer feel catastrophic. Know exactly what to do.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <div class="roadmap-num"><span>06</span></div>
+        <div class="roadmap-card">
+          <span class="roadmap-tag" data-en="Sessions 6–7" data-vi="Buổi 6–7">Sessions 6–7</span>
+          <h3 data-en="Long-Term Independence" data-vi="Độc Lập Lâu Dài">Long-Term Independence</h3>
+          <p data-en="Review progress, refine strategy, build a 3-month maintenance plan. Move forward with full confidence." data-vi="Xem xét tiến trình, hoàn thiện chiến lược và xây dựng kế hoạch duy trì 3 tháng. Tự tin tiến về phía trước.">Review progress, refine strategy, build a 3-month maintenance plan. Move forward with full confidence.</p>
+        </div>
+      </div>
+    </div>
+    <div class="support-note">
+      <span data-en="📱 Daily message support throughout the program — I reply at the end of each day." data-vi="📱 Hỗ trợ nhắn tin hàng ngày trong suốt chương trình — tôi phản hồi vào cuối mỗi ngày.">📱 Daily message support throughout the program — I reply at the end of each day.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIFFERENT ═══ -->
+<section id="different" style="background:#fff">
+  <div class="container">
+    <div style="text-align:center;max-width:600px;margin:0 auto 40px">
+      <span class="eyebrow" data-en="What Makes This Different" data-vi="Điểm Khác Biệt">What Makes This Different</span>
+      <h2 data-en="This is not a typical treatment session" data-vi="Đây không phải buổi điều trị thông thường">This is not a typical treatment session</h2>
+    </div>
+    <div class="card-grid-2">
+      <div class="card">
+        <div class="diff-check"></div>
+        <h3 data-en="Understanding over guesswork" data-vi="Hiểu biết thay vì đoán mò">Understanding over guesswork</h3>
+        <p data-en="Every step is explained clearly. Understanding your pain is itself part of recovery." data-vi="Mỗi bước đều được giải thích. Hiểu về đau tự nó đã là một phần của quá trình phục hồi.">Every step is explained clearly. Understanding your pain is itself part of recovery.</p>
+      </div>
+      <div class="card">
+        <div class="diff-check"></div>
+        <h3 data-en="Long-term thinking" data-vi="Tư duy dài hạn">Long-term thinking</h3>
+        <p data-en="We're not chasing short-term relief. We're building a foundation for years of independent health management." data-vi="Chúng tôi không theo đuổi giảm đau ngắn hạn. Chúng tôi xây dựng nền tảng tự quản lý sức khỏe lâu dài.">We're not chasing short-term relief. We're building a foundation for years of independent health management.</p>
+      </div>
+      <div class="card">
+        <div class="diff-check"></div>
+        <h3 data-en="Personalised to your life" data-vi="Cá nhân hóa theo cuộc sống">Personalised to your life</h3>
+        <p data-en="Generic protocols don't work for chronic pain. Everything is tailored to your body, routine, and goals." data-vi="Các phác đồ chung không hiệu quả với đau mãn tính. Mọi thứ đều được điều chỉnh theo bạn.">Generic protocols don't work for chronic pain. Everything is tailored to your body, routine, and goals.</p>
+      </div>
+      <div class="card">
+        <div class="diff-check"></div>
+        <h3 data-en="You become the expert" data-vi="Bạn trở thành chuyên gia">You become the expert</h3>
+        <p data-en="The goal is your independence. By the end, you'll have the knowledge and confidence to manage your own health." data-vi="Mục tiêu là sự độc lập của bạn. Khi kết thúc, bạn sẽ có kiến thức và tự tin để tự quản lý sức khỏe.">The goal is your independence. By the end, you'll have the knowledge and confidence to manage your own health.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap">
+        <img class="about-photo" src="https://images.unsplash.com/photo-1706353399656-210cca727a33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=900" alt="Physiotherapist Da Nang"/>
+      </div>
+      <div>
+        <span class="eyebrow" data-en="About" data-vi="Về Tôi">About</span>
+        <h2 data-en="Who you'll be working with" data-vi="Người bạn sẽ làm việc cùng">Who you'll be working with</h2>
+        <p style="margin-top:10px;font-size:18px;font-weight:700;color:#2c2c2c" data-en="[Triều Vỹ Lê], PT" data-vi="Triều Vỹ Lê, PT">[Triều Vỹ Lê], PT</p>
+        <p style="font-size:14px;color:#6b6b6b;margin-bottom:20px" data-en="Physiotherapist · Chronic Pain Specialist · Da Nang" data-vi="Chuyên Viên Vật Lý Trị Liệu · Chuyên Gia Đau Mãn Tính · Đà Nẵng">Physiotherapist · Chronic Pain Specialist · Da Nang</p>
+        <p style="margin-bottom:14px" data-en="I'm a physiotherapist with a specialist focus on chronic musculoskeletal pain. I've worked with Vietnamese and international clients across a wide range of persistent pain conditions." data-vi="Tôi là chuyên viên vật lý trị liệu chuyên về đau cơ xương khớp mãn tính. Tôi đã làm việc với cả khách hàng Việt Nam và quốc tế với nhiều tình trạng đau kéo dài.">
+          I'm a physiotherapist with a specialist focus on chronic musculoskeletal pain. I've worked with Vietnamese and international clients across a wide range of persistent pain conditions.
+        </p>
+        <p style="margin-bottom:14px" data-en="I'm fluent in English and work comfortably with expats in Da Nang. My approach is grounded in modern pain science and evidence-based methods." data-vi="Tôi thông thạo tiếng Anh và làm việc thoải mái với người nước ngoài tại Đà Nẵng. Phương pháp của tôi dựa trên khoa học đau hiện đại và bằng chứng lâm sàng.">
+          I'm fluent in English and work comfortably with expats in Da Nang. My approach is grounded in modern pain science and evidence-based methods.
+        </p>
+        <p data-en="I believe every person with chronic pain deserves a clear explanation, a practical plan, and the skills to move forward independently." data-vi="Tôi tin mỗi người sống với đau mãn tính đều xứng đáng được giải thích rõ ràng, kế hoạch thực tế và kỹ năng để tiến về phía trước độc lập.">
+          I believe every person with chronic pain deserves a clear explanation, a practical plan, and the skills to move forward independently.
+        </p>
+        <div class="trait-pills">
+          <span class="pill" data-en="Fluent English" data-vi="Thông thạo tiếng Anh">Fluent English</span>
+          <span class="pill" data-en="International clients" data-vi="Đón nhận khách quốc tế">International clients</span>
+          <span class="pill" data-en="Evidence-based" data-vi="Dựa trên bằng chứng">Evidence-based</span>
+          <span class="pill" data-en="Online &amp; in-person" data-vi="Online &amp; trực tiếp">Online &amp; in-person</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOR WHO ═══ -->
+<section id="forwho" style="background:#fff">
+  <div class="container-md">
+    <div style="text-align:center;max-width:560px;margin:0 auto">
+      <span class="eyebrow" data-en="Is This Right For You?" data-vi="Dành Cho Ai?">Is This Right For You?</span>
+      <h2 data-en="Who this is designed for" data-vi="Ai phù hợp với chương trình này">Who this is designed for</h2>
+    </div>
+    <div class="who-grid">
+      <div class="who-yes">
+        <p class="who-title" data-en="✅ This IS for you:" data-vi="✅ Chương trình NÀY dành cho bạn:">✅ This IS for you:</p>
+        <ul class="who-list">
+          <li><span class="icon">✓</span><span data-en="Pain for 3+ months without full resolution" data-vi="Đau hơn 3 tháng chưa hồi phục hoàn toàn">Pain for 3+ months without full resolution</span></li>
+          <li><span class="icon">✓</span><span data-en="Tried multiple treatments without lasting results" data-vi="Đã thử nhiều phương pháp mà không có kết quả lâu dài">Tried multiple treatments without lasting results</span></li>
+          <li><span class="icon">✓</span><span data-en="Want to understand your pain, not just mask it" data-vi="Muốn hiểu cơn đau, không chỉ che giấu nó">Want to understand your pain, not just mask it</span></li>
+          <li><span class="icon">✓</span><span data-en="Willing to play an active role in recovery" data-vi="Sẵn sàng đóng vai trò tích cực trong hồi phục">Willing to play an active role in recovery</span></li>
+          <li><span class="icon">✓</span><span data-en="Open to a structured, evidence-based approach" data-vi="Cởi mở với phương pháp có cấu trúc, dựa trên bằng chứng">Open to a structured, evidence-based approach</span></li>
+          <li><span class="icon">✓</span><span data-en="Want long-term independence from treatment" data-vi="Muốn độc lập lâu dài, không phụ thuộc điều trị mãi">Want long-term independence from treatment</span></li>
+        </ul>
+      </div>
+      <div class="who-no">
+        <p class="who-title" data-en="❌ This is NOT for you:" data-vi="❌ Chương trình KHÔNG dành cho bạn:">❌ This is NOT for you:</p>
+        <ul class="who-list">
+          <li><span class="icon" style="color:#c0714a">✕</span><span data-en="Looking for immediate pain relief (one-session massage)" data-vi="Tìm kiếm giảm đau ngay lập tức (ví dụ: một buổi massage)">Looking for immediate pain relief (one-session massage)</span></li>
+          <li><span class="icon" style="color:#c0714a">✕</span><span data-en="Acute unassessed injury" data-vi="Chấn thương cấp tính chưa được đánh giá">Acute unassessed injury</span></li>
+          <li><span class="icon" style="color:#c0714a">✕</span><span data-en="Expect results without active participation" data-vi="Muốn kết quả mà không tham gia tích cực">Expect results without active participation</span></li>
+          <li><span class="icon" style="color:#c0714a">✕</span><span data-en="Not open to reconsidering your beliefs about pain" data-vi="Không sẵn sàng xem xét lại cách nghĩ về đau">Not open to reconsidering your beliefs about pain</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section id="pricing" style="background:#f8f5f0">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto">
+      <span class="eyebrow" data-en="Investment" data-vi="Chi Phí Đầu Tư">Investment</span>
+      <h2 data-en="Transparent, fair pricing" data-vi="Mức giá minh bạch, rõ ràng">Transparent, fair pricing</h2>
+      <p style="margin-top:14px" data-en="A premium, personalised service — not a high-volume clinic." data-vi="Dịch vụ cao cấp, cá nhân hóa — không phải phòng khám khối lượng lớn.">A premium, personalised service — not a high-volume clinic.</p>
+    </div>
+    <div class="price-card">
+      <div class="price-free-banner">
+        <div>
+          <p data-en="Initial Assessment: FREE" data-vi="Buổi Đánh Giá Ban Đầu: MIỄN PHÍ">Initial Assessment: FREE</p>
+          <small data-en="No commitment. Just clarity." data-vi="Không ràng buộc. Chỉ là sự rõ ràng.">No commitment. Just clarity.</small>
+        </div>
+        <span class="free-tag-pill">FREE</span>
+      </div>
+      <div class="price-body">
+        <div class="price-amount">
+          <strong data-en="500,000 VND" data-vi="500.000 ₫">500,000 VND</strong>
+          <span data-en="/ session" data-vi="/ buổi">/ session</span>
+        </div>
+        <p class="price-total">
+          <span data-en="Full program (7 sessions): " data-vi="Toàn bộ chương trình (7 buổi): ">Full program (7 sessions): </span>
+          <strong data-en="3,000,000 VND" data-vi="3.000.000 ₫">3,000,000 VND</strong>
+        </p>
+        <p class="includes-title" data-en="Includes:" data-vi="Bao gồm:">Includes:</p>
+        <ul class="includes-list">
+          <li data-en="60-minute structured consultation per session" data-vi="Mỗi buổi tư vấn có cấu trúc 60 phút">60-minute structured consultation per session</li>
+          <li data-en="Daily message support throughout the program" data-vi="Hỗ trợ nhắn tin hàng ngày trong suốt chương trình">Daily message support throughout the program</li>
+          <li data-en="Written personalised plan after each session" data-vi="Kế hoạch cá nhân hóa bằng văn bản sau mỗi buổi">Written personalised plan after each session</li>
+          <li data-en="Flare-up management plan" data-vi="Kế hoạch xử lý flare-up">Flare-up management plan</li>
+          <li data-en="3-month maintenance strategy" data-vi="Chiến lược duy trì 3 tháng">3-month maintenance strategy</li>
+        </ul>
+        <p class="price-note" data-en="Available online (video call) and in-person in Da Nang." data-vi="Có thể thực hiện online (video call) và trực tiếp tại Đà Nẵng.">Available online (video call) and in-person in Da Nang.</p>
+        <button class="btn btn-primary" style="width:100%;text-align:center;padding:16px" onclick="scrollTo('cta')" data-en="Start with a Free Assessment" data-vi="Bắt Đầu Với Buổi Đánh Giá Miễn Phí">Start with a Free Assessment</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section id="testimonials" style="background:#fff">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto">
+      <span class="eyebrow" data-en="Client Experiences" data-vi="Trải Nghiệm Khách Hàng">Client Experiences</span>
+      <h2 data-en="What clients say" data-vi="Khách hàng nói gì">What clients say</h2>
+    </div>
+    <div class="card-grid-2" style="margin-top:40px">
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote" data-en='"I'd been in pain for two years. After a few sessions I finally understood why — and what I could actually do. The daily support made all the difference."' data-vi='"Tôi đã đau hai năm và thử đủ thứ. Sau vài buổi tôi mới thực sự hiểu tại sao đau không biến mất — và biết phải làm gì. Hỗ trợ hàng ngày tạo ra sự khác biệt lớn."'>
+          "I'd been in pain for two years. After a few sessions I finally understood why — and what I could actually do. The daily support made all the difference."
+        </p>
+        <p class="testi-name">Sarah M.</p>
+        <p class="testi-origin" data-en="British expat, Da Nang" data-vi="Người Anh, Đà Nẵng">British expat, Da Nang</p>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote" data-en='"I used to think chronic back pain was something I just had to live with. This program changed that completely."' data-vi='"Tôi từng nghĩ đau lưng mãn tính là thứ phải chịu đựng mãi mãi. Chương trình này thay đổi hoàn toàn suy nghĩ đó. Rất cảm ơn!"'>
+          "I used to think chronic back pain was something I just had to live with. This program changed that completely."
+        </p>
+        <p class="testi-name">Trung N.</p>
+        <p class="testi-origin" data-en="Ho Chi Minh City" data-vi="TP. Hồ Chí Minh">Ho Chi Minh City</p>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote" data-en='"As an expat I was nervous about finding quality care in Vietnam. This program exceeded every expectation. Genuinely evidence-based."' data-vi='"Là người nước ngoài, tôi lo ngại về chất lượng y tế tại Việt Nam. Chương trình này vượt mọi kỳ vọng. Thực sự dựa trên bằng chứng."'>
+          "As an expat I was nervous about finding quality care in Vietnam. This program exceeded every expectation. Genuinely evidence-based."
+        </p>
+        <p class="testi-name">Mark D.</p>
+        <p class="testi-origin" data-en="Australian, Hoi An" data-vi="Người Úc, Hội An">Australian, Hoi An</p>
+      </div>
+      <div class="card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-quote" data-en='"Very structured and clear. Each session had a specific goal and the homework was practical. I felt real progress every week."' data-vi='"Rất có cấu trúc và rõ ràng. Mỗi buổi có mục tiêu cụ thể và bài tập về nhà thực tế. Tôi cảm nhận được tiến bộ mỗi tuần."'>
+          "Very structured and clear. Each session had a specific goal and the homework was practical. I felt real progress every week."
+        </p>
+        <p class="testi-name">Linh P.</p>
+        <p class="testi-origin" data-en="Hanoi" data-vi="Hà Nội">Hanoi</p>
+      </div>
+    </div>
+    <p class="testi-note" data-en="* Placeholder testimonials — replace with real client quotes." data-vi="* Đây là đánh giá mẫu — thay bằng đánh giá thực từ khách hàng.">* Placeholder testimonials — replace with real client quotes.</p>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section id="cta">
+  <div class="container-sm" style="text-align:center">
+    <h2 data-en="Ready to find clarity?" data-vi="Sẵn sàng tìm sự rõ ràng?">Ready to find clarity?</h2>
+    <p data-en="Start with a free 20-minute assessment. No pressure, no commitment — just an honest conversation about whether this is the right approach for you." data-vi="Bắt đầu bằng buổi đánh giá miễn phí 20 phút. Không áp lực — chỉ là cuộc trò chuyện thành thật về việc phương pháp này có phù hợp với bạn không.">
+      Start with a free 20-minute assessment. No pressure, no commitment — just an honest conversation about whether this is the right approach for you.
+    </p>
+    <div class="btn-row" style="justify-content:center;margin-top:36px">
+      <a href="https://wa.me/84706237935" target="_blank" class="btn btn-primary" data-en="📅 Book Free Assessment" data-vi="📅 Đặt Lịch Đánh Giá Miễn Phí">📅 Book Free Assessment</a>
+      <a href="https://wa.me/84000000000" target="_blank" class="btn btn-outline" data-en="💬 Send a Message" data-vi="💬 Gửi Tin Nhắn">💬 Send a Message</a>
+    </div>
+    <p style="font-size:13px;color:#8c8480;margin-top:20px" data-en="Responds within 24 hours · Online & in-person in Da Nang" data-vi="Thường phản hồi trong 24 giờ · Online & trực tiếp tại Đà Nẵng">
+      Responds within 24 hours · Online & in-person in Da Nang
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <p data-en="Chronic Pain Consultation · Da Nang, Vietnam" data-vi="Tư vấn đau mãn tính · Đà Nẵng, Việt Nam">Chronic Pain Consultation · Da Nang, Vietnam</p>
+    <p data-en="© 2026 · All rights reserved" data-vi="© 2026 · Bảo lưu mọi quyền">© 2026 · All rights reserved</p>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
